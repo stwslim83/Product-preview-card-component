@@ -1,0 +1,153 @@
+/*
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(212, 21%, 14%)
+- White: hsl(0, 0%, 100%)
+
+
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(30deg, 38%, 92%);
+  min-width: 600px;
+}
+
+.fullWrapper {
+  margin-bottom: 1rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "desktop-image text";
+  width: 100%;
+  max-width: 600px;
+}
+
+div.text h1 {
+  font-family: "Fraunces", serif;
+  color: hsla(212deg, 21%, 14%, 0.93);
+}
+
+.description-p {
+  color: hsla(212deg, 21%, 14%, 0.494);
+  font-family: "Montserrat", sans-serif;
+}
+
+.text {
+  grid-area: text;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.price {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+  color: hsl(158deg, 36%, 37%);
+  font-family: "Fraunces", serif;
+}
+
+.price span {
+  font-size: 1rem;
+  align-self: center;
+  text-decoration: line-through;
+  color: hsla(212deg, 21%, 14%, 0.494);
+  font-family: "Montserrat", sans-serif;
+}
+
+.desktop-image {
+  grid-area: desktop-image;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.mobile-image {
+  display: none;
+}
+
+.perfume-p {
+  letter-spacing: 0.3rem;
+  font-family: "Montserrat", sans-serif;
+  color: hsla(212deg, 21%, 14%, 0.494);
+}
+
+button {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(158deg, 36%, 37%);
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  border: 0;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: hsl(158deg, 33%, 23%);
+}
+
+.shopping-cart {
+  height: 1.4rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media screen and (min-device-width: 280px) and (max-device-width: 650px) {
+  body {
+    justify-content: flex-start;
+    min-width: 280px;
+  }
+  .fullWrapper {
+    width: 100%;
+    height: 100%;
+    max-height: 667px;
+    display: grid;
+    border-radius: 1rem 1rem 0 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: "desktop-image" "text";
+    border: 2px solid red;
+    border-radius: 1rem 1rem;
+  }
+  .desktop-image {
+    display: none;
+  }
+  .mobile-image {
+    display: block;
+    grid-area: desktop-image;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+}/*# sourceMappingURL=style.css.map */
